@@ -53,5 +53,8 @@
     <Compile Include="Models\TeamModel.cs" />
     <Compile Include="Models\TournamentModel.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
