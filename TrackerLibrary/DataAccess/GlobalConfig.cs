@@ -21,6 +21,8 @@ namespace TrackerLibrary
             if (textFiles)
             {
                 // TODO: Make the text connection.
+                TextConnection text = new TextConnection();
+                Connections.Add(text);
             }
         }
     }

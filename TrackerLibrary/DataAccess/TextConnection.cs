@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrackerLibrary
 {
-    public class TextConnector : IDataConnection
+    public class TextConnection : IDataConnection
     {
         //TODO: Сделать метод CreatePrize совместимым с текстом.
         public PrizeModel CreatePrize(PrizeModel model)
