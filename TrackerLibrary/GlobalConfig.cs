@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using ManagerLibrary.DataAccess;
 
-namespace TrackerLibrary
+namespace ManagerLibrary
 {
     public static class GlobalConfig
     {
@@ -21,7 +18,7 @@ namespace TrackerLibrary
             if (textFiles)
             {
                 // TODO: Make the text connection.
-                TextConnection text = new TextConnection();
+                TextConnector text = new TextConnector();
                 Connections.Add(text);
             }
         }

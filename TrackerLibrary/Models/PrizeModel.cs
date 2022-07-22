@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TrackerLibrary
+﻿
+namespace ManagerLibrary.Models
 {
     public class PrizeModel
     {
@@ -24,13 +19,37 @@ namespace TrackerLibrary
         public string PlaceName { get; set; }
         
         /// <summary>
-        /// Призовые.
+        /// Призовые, которые команда получает за полученное место. Равно нулю, если
+        /// данное свойство не используется.
         /// </summary>
         public decimal PrizeAmount { get; set; }
         
         /// <summary>
-        /// Процент призовых от вступительного взноса.
+        /// Процент призовых от вступительного взноса в виде десятичного числа.
+        /// Равно нулю, если данное свойство не используется.
         /// </summary>
         public double PrizePercentage { get; set; }
+
+        public PrizeModel()
+        {
+
+        }
+
+        public PrizeModel(string placeNumber, string placeName, string prizeAmount, string prizePercentage)
+        {
+            PlaceName = placeName;
+
+            int placeNumberValue = 0;
+            int.TryParse(placeNumber, out placeNumberValue);
+            PlaceNumber = placeNumberValue;
+
+            decimal prizeAmountValue = 0;
+            decimal.TryParse(prizeAmount, out prizeAmountValue);
+            PrizeAmount = prizeAmountValue;
+            
+            double prizePercentageValue = 0;
+            double.TryParse(prizePercentage, out prizePercentageValue);
+            PrizePercentage = prizePercentageValue;
+        }
     }
 }

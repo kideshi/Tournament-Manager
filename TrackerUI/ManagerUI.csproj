@@ -119,9 +119,9 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TrackerLibrary\TrackerLibrary.csproj">
+    <ProjectReference Include="..\TrackerLibrary\ManagerLibrary.csproj">
       <Project>{7d3b2328-e08f-49b9-bc97-fa53d96930bc}</Project>
-      <Name>TrackerLibrary</Name>
+      <Name>ManagerLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TrackerLibrary
+﻿
+namespace TrackerLibrary.Models
 {
     public class PersonModel
     {
@@ -12,12 +7,12 @@ namespace TrackerLibrary
         /// Имя человека.
         /// </summary>
         public string FirstName { get; set; }
-        
+
         /// <summary>
         /// Фамилия человека.
         /// </summary>
         public string LastName { get; set; }
-        
+
         /// <summary>
         /// Действующая электронная почта человека.
         /// </summary>

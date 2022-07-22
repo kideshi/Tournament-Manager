@@ -101,6 +101,7 @@
             this.prizeAmountValue.Name = "prizeAmountValue";
             this.prizeAmountValue.Size = new System.Drawing.Size(152, 31);
             this.prizeAmountValue.TabIndex = 16;
+            this.prizeAmountValue.Text = "0";
             this.prizeAmountValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // prizeAmountLabel
@@ -121,6 +122,7 @@
             this.prizePercentageValue.Name = "prizePercentageValue";
             this.prizePercentageValue.Size = new System.Drawing.Size(152, 31);
             this.prizePercentageValue.TabIndex = 18;
+            this.prizePercentageValue.Text = "0";
             this.prizePercentageValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // prizePercentageLabel

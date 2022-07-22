@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ManagerLibrary.Models;
 
-namespace TrackerLibrary
+namespace ManagerLibrary.DataAccess
 {
-    public class TextConnection : IDataConnection
+    public class TextConnector : IDataConnection
     {
         //TODO: Сделать метод CreatePrize совместимым с текстом.
         public PrizeModel CreatePrize(PrizeModel model)
