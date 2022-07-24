@@ -2,12 +2,6 @@
 using System.Data;
 using Dapper;
 
-//@PlaceNumber int,
-//@PlaceName nvarchar(50),
-//@PrizeAmount money,
-//@PrizePercentage float,
-//@id int = 0 OUTPUT
-
 namespace ManagerLibrary.DataAccess
 {
     public class SqlConnector : IDataConnection

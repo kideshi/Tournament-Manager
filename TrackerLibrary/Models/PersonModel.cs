@@ -1,5 +1,5 @@
 ﻿
-namespace TrackerLibrary.Models
+namespace ManagerLibrary.Models
 {
     public class PersonModel
     {
