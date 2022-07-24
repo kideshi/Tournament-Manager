@@ -1,26 +1,37 @@
 ﻿using System.Collections.Generic;
+using System.Configuration;
 using ManagerLibrary.DataAccess;
 
 namespace ManagerLibrary
 {
     public static class GlobalConfig
     {
-        public static List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>();
+        public static IDataConnection Connection { get; private set; }
 
-        public static void InitializeConnections(bool database, bool textFiles)
+        public static void InitializeConnections(DatabaseType databaseType)
         {
-            if (database)
+            if (databaseType == DatabaseType.Sql)
             {
                 // TODO: Реализовать SqlConnector более здраво.
                 SqlConnector sql = new SqlConnector();
-                Connections.Add(sql);
+                Connection = sql;
             }
-            if (textFiles)
+            else if (databaseType == DatabaseType.TextFile)
             {
                 // TODO: Make the text connection.
                 TextConnector text = new TextConnector();
-                Connections.Add(text);
+                Connection = text;
             }
+        }
+
+        /// <summary>
+        /// Возвращает строку подключения к серверу БД.
+        /// </summary>
+        /// <param name="name">Название БД, строку подключения которой необходимо получить.</param>
+        /// <returns>Строка подключения.</returns>
+        public static string ConString(string name)
+        {
+            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
     }
 }
