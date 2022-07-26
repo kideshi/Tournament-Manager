@@ -6,7 +6,6 @@ namespace ManagerLibrary.DataAccess
 {
     public class SqlConnector : IDataConnection
     {
-        // TODO: Сделать метод CreatePrize сохранять объект в БД.
         /// <summary>
         /// Сохраняет новый приз в базу данных.
         /// </summary>
