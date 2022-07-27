@@ -15,7 +15,7 @@ namespace TrackerUI
 
         private void createPrizeButton_Click(object sender, EventArgs e)
         {
-            if (ValidateForm())
+            if (IsValidForm())
             {
                 PrizeModel prizeModel = new PrizeModel(
                     placeNumberValue.Text,
@@ -34,10 +34,9 @@ namespace TrackerUI
             {
                 MessageBox.Show("This form has invalid information. Please check it and try again.");
             }
-
         }
 
-        private bool ValidateForm()
+        private bool IsValidForm()
         {
             bool output = true;
             int placeNumber = 0;

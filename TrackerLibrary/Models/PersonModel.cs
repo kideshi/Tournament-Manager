@@ -4,6 +4,11 @@ namespace ManagerLibrary.Models
     public class PersonModel
     {
         /// <summary>
+        /// Уникальный идентификатор для приза.
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
         /// Имя человека.
         /// </summary>
         public string FirstName { get; set; }
@@ -22,5 +27,10 @@ namespace ManagerLibrary.Models
         /// Действующий номер телефона человека.
         /// </summary>
         public string PhoneNumber { get; set; }
+
+        public string FullName
+        {
+            get { return $"{ FirstName } { LastName }"; }
+        }
     }
 }

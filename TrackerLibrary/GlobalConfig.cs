@@ -12,13 +12,11 @@ namespace ManagerLibrary
         {
             if (databaseType == DatabaseType.Sql)
             {
-                // TODO: Реализовать SqlConnector более здраво.
                 SqlConnector sql = new SqlConnector();
                 Connection = sql;
             }
             else if (databaseType == DatabaseType.TextFile)
             {
-                // TODO: Make the text connection.
                 TextConnector text = new TextConnector();
                 Connection = text;
             }

@@ -5,13 +5,18 @@ namespace ManagerLibrary.Models
     public class TeamModel
     {
         /// <summary>
-        /// Список участников данной команды.
+        /// Уникальный идентификатор для приза.
         /// </summary>
-        public List<PersonModel> TeamMembers { get; set; } = new List<PersonModel>();
-        
+        public int Id { get; set; }
+
         /// <summary>
         /// Название команды.
         /// </summary>
         public string TeamName { get; set; }
+        
+        /// <summary>
+        /// Список участников данной команды.
+        /// </summary>
+        public List<PersonModel> TeamMembers { get; set; } = new List<PersonModel>();
     }
 }

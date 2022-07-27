@@ -219,11 +219,11 @@
             this.prizesLabel.AutoSize = true;
             this.prizesLabel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.prizesLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.prizesLabel.Location = new System.Drawing.Point(440, 313);
+            this.prizesLabel.Location = new System.Drawing.Point(488, 313);
             this.prizesLabel.Name = "prizesLabel";
-            this.prizesLabel.Size = new System.Drawing.Size(166, 24);
+            this.prizesLabel.Size = new System.Drawing.Size(62, 24);
             this.prizesLabel.TabIndex = 21;
-            this.prizesLabel.Text = "Teams / Players";
+            this.prizesLabel.Text = "Prizes";
             // 
             // prizesListBox
             // 
