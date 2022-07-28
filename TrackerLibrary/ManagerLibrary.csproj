@@ -59,7 +59,7 @@
     <Compile Include="Models\TournamentModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Database\" />
+    <Folder Include="Database\StoredProceduresCode\" />
     <Folder Include="TextDatabase\" />
   </ItemGroup>
   <ItemGroup>
