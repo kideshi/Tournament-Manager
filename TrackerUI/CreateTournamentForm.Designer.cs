@@ -131,6 +131,7 @@
             this.createNewTeamLink.TabIndex = 14;
             this.createNewTeamLink.TabStop = true;
             this.createNewTeamLink.Text = "create team";
+            this.createNewTeamLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createNewTeamLink_LinkClicked);
             // 
             // addTeamButton
             // 
@@ -161,6 +162,7 @@
             this.createPrizeButton.TabIndex = 16;
             this.createPrizeButton.Text = "Create prize";
             this.createPrizeButton.UseVisualStyleBackColor = true;
+            this.createPrizeButton.Click += new System.EventHandler(this.createPrizeButton_Click);
             // 
             // tournamentPlayersListBox
             // 

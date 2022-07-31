@@ -74,5 +74,10 @@ namespace ManagerLibrary.DataAccess
         {
             return PeopleFile.FullFilePath().LoadFile().ConvertToPersonModels();
         }
+
+        public List<TeamModel> GetTeamAll()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

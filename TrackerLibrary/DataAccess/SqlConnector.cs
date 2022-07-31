@@ -90,5 +90,29 @@ namespace ManagerLibrary.DataAccess
 
             return output;
         }
+
+        public List<TeamModel> GetTeamAll()
+        {
+            List<TeamModel> output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConString(dbName)))
+            {
+                output = connection.Query<TeamModel>("dbo.spTeam_GetAll").ToList();
+
+                foreach (TeamModel team in output)
+                {
+                    var parameters = new DynamicParameters();
+                    parameters.Add("@TeamId", team.Id);
+
+                    team.TeamMembers = connection.Query<PersonModel>(
+                                                                    "dbo.spTeamMembers_GetByTeam", 
+                                                                    parameters, 
+                                                                    commandType: CommandType.StoredProcedure
+                                                                    ).ToList();
+                }
+            }
+
+            return output;
+        }
     }
 }

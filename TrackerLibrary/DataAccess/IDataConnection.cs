@@ -9,6 +9,7 @@ namespace ManagerLibrary.DataAccess
         PersonModel CreatePerson(PersonModel person);
         TeamModel CreateTeam(TeamModel team);
         List<PersonModel> GetPersonAll();
+        List<TeamModel> GetTeamAll();
         
     }
 }
